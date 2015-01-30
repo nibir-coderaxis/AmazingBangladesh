@@ -18,6 +18,8 @@ import android.support.v4.widget.DrawerLayout;
 import android.widget.ArrayAdapter;
 import android.widget.TextView;
 
+import com.dosthim.fragement.HomeFragement;
+
 
 public class MasterActivity extends ActionBarActivity
         implements NavigationDrawerFragment.NavigationDrawerCallbacks {
@@ -51,9 +53,26 @@ public class MasterActivity extends ActionBarActivity
     public void onNavigationDrawerItemSelected(int position) {
         // update the main content by replacing fragments
         FragmentManager fragmentManager = getSupportFragmentManager();
-        fragmentManager.beginTransaction()
-                .replace(R.id.container, PlaceholderFragment.newInstance(position + 1))
-                .commit();
+
+        switch (position){
+            case 1:
+                fragmentManager.beginTransaction()
+                        .replace(R.id.container, HomeFragement.newInstance(position + 1))
+                        .commit();
+                break;
+            case 2:
+                fragmentManager.beginTransaction()
+                        .replace(R.id.container, PlaceholderFragment.newInstance(position + 1))
+                        .commit();
+                break;
+
+            default:
+                fragmentManager.beginTransaction()
+                        .replace(R.id.container, PlaceholderFragment.newInstance(position + 1))
+                        .commit();
+                break;
+        }
+
     }
 
     public void onSectionAttached(int number) {
@@ -66,6 +85,12 @@ public class MasterActivity extends ActionBarActivity
                 break;
             case 3:
                 mTitle = getString(R.string.title_section3);
+                break;
+            case 4:
+                mTitle = getString(R.string.title_section4);
+                break;
+            case 5:
+                mTitle = getString(R.string.title_section5);
                 break;
         }
     }
@@ -134,7 +159,11 @@ public class MasterActivity extends ActionBarActivity
         @Override
         public View onCreateView(LayoutInflater inflater, ViewGroup container,
                                  Bundle savedInstanceState) {
+
+
             View rootView = inflater.inflate(R.layout.fragment_master, container, false);
+
+
             return rootView;
         }
 

@@ -16,6 +16,10 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name="com.dosthim.fragement.HomeFragement"
+            android:label="@string/title_activity_home_fragement" >
+        </activity>
     </application>
 
 </manifest>
