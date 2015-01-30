@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Amazing Bangladesh</string>
+    <string name="title_section1">Home</string>
+    <string name="title_section2">History</string>
+    <string name="title_section3">Attractive Places</string>
+    <string name="title_section4">festival and National day</string>
+    <string name="title_section5">important communication Phrase</string>
+    <string name="navigation_drawer_open">Open Category</string>
+    <string name="navigation_drawer_close">Close Category</string>
+    <string name="action_example">Example action</string>
+    <string name="action_settings">Settings</string>
+
+</resources>
